@@ -11,7 +11,7 @@ export default function Home() {
             I am a full stack developer and a blockchain developer.
             Looking for a job in the field of blockchain development.
           </p>
-          <div className="mt-4 text-2xl text-yellow-500">ATTENTION: THIS Site IS WIP</div>
+          <div className="mt-4 text-2xl text-yellow-500">ATTENTION: THIS SITE IS WIP</div>
         </div>
       </section>
     </div>
