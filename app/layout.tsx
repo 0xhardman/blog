@@ -30,23 +30,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="flex items-center px-8 backdrop-blur-xl bg-transparent  justify-between py-2 border-b fixed w-full top-0 bg-white">
+        <header className="flex items-center px-8 backdrop-blur-xl bg-transparent  justify-between py-6 border-b fixed w-full top-0 bg-white">
           <div className="flex items-center ">
-            <img width="36px" src="/logo.png" alt="logo" />
-            <h1 className="text-xl font-bold">0xhardman</h1>
+            <img width="54px" className="" src="/logo.png" alt="logo" />
+            <h1 className="text-xl font-bold">0xHardman</h1>
           </div>
-          <ul className="flex items-center gap-4">
+          <ul className="flex items-center gap-8 text-gray-900 font-semibold">
             <li>Intro</li>
-            <li>Exp</li>
-            <li>Blog</li>
+            <li>Experience</li>
+            <li>Articles</li>
           </ul>
           <div className="flex items-center gap-4">
             <button>Connect</button>
           </div>
         </header>
-        <div className="container mx-auto">
-          {children}
-        </div>
+        {children}
         <footer className="flex flex-col items-center justify-center w-full py-4 gap-2 text-gray-600 text-sm">
           <div>
             <p>Copyright © 2024 0xhardman</p>
