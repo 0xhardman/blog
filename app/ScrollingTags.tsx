@@ -1,5 +1,6 @@
 export const ScrollingTags = () => {
   const tags = [
+    "时间管理大失",
     "DigitalNomad",
     "Frontend",
     "艺术之梦的安息者",
@@ -7,9 +8,10 @@ export const ScrollingTags = () => {
     "DevOps",
     "Blockchain",
     "整活星人",
-    "Ollie的板混",
+    "Ollie板混",
     "Rust",
     "Golang",
+    "ASCII Artist",
     "白日梦想家",
     "Python",
     "PHP",
