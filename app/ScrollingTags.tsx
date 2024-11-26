@@ -1,0 +1,39 @@
+export const ScrollingTags = () => {
+  const tags = [
+    "DigitalNomad",
+    "Frontend",
+    "艺术之梦的安息者",
+    "Backend",
+    "DevOps",
+    "Blockchain",
+    "整活星人",
+    "Ollie的板混",
+    "Rust",
+    "Golang",
+    "白日梦想家",
+    "Python",
+    "PHP",
+    "Hackathon刺客",
+    "Java",
+    "打标签的Punk",
+    "C++",
+    "DAO",
+    "花里胡哨学家",
+    "BUPT3DAO",
+    "LXDAO网管"
+  ];
+
+  return (
+    <div className="overflow-scroll border-y border-[#2975DF55]">
+      <div className="flex gap-10 py-6 w-fit animate-[scroll_90s_linear_infinite]">
+        {[...Array(4)].map((_, index) => (
+          <div key={index} className="flex gap-10 text-3xl font-bold">
+            {tags.map((text, i) => (
+              <div className="text-nowrap" key={i}>{text}</div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}; 

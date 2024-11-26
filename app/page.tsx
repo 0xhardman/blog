@@ -1,13 +1,5 @@
-import HyperText from "@/components/ui/hyper-text";
-
-
-// ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓███████▓▒░░▒▓███████▓▒░░▒▓██████████████▓▒░ ░▒▓██████▓▒░░▒▓███████▓▒░  
-// ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-// ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-// ░▒▓█▓▒░░▒▓█▓▒░░▒▓██████▓▒░░▒▓████████▓▒░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-// ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-// ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
-// ░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░                                                                                                                                                                                                                                                
+import { Hero0xHardman } from "./Hero0xHardman";
+import { ScrollingTags } from "./ScrollingTags";
 
 /* eslint-disable @next/next/no-img-element */
 export default function Home() {
@@ -16,143 +8,11 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center w-full min-h-[calc(100vh-100px)] py-20 container mx-auto">
         <div className="flex flex-col items-center gap-10">
           <div className="flex flex-col justify-center items-center gap-10">
-            <div className="flex">
-              <div>
-                {/* 0 */}
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="░▒▓████████▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="░▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="░▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="░▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="░▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="░▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="░▒▓████████▓▒░" />
-              </div>
-              <div>
-                {/* x */}
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="░▒▓██████▓▒░░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-
-              </div>
-              <div>
-                {/* H */}
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓████████▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-              </div>
-              <div>
-                {/* A */}
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="░▒▓██████▓▒░░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓████████▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-              </div>
-              <div>
-                {/* R */}
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓███████▓▒░░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓███████▓▒░░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-              </div>
-              <div>
-                {/* D */}
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓███████▓▒░░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓███████▓▒░░" />
-              </div>
-              <div>
-                {/* M */}
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓██████████████▓▒░░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░░▒▓█▓▒░" />
-              </div>
-              <div>
-                {/* A */}
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="░▒▓██████▓▒░░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓████████▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-              </div>
-              <div>
-                {/* N */}
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓███████▓▒░░ " />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-                <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text="▒▓█▓▒░░▒▓█▓▒░" />
-              </div>
-            </div>
+            <Hero0xHardman />
           </div>
-          {/* <img className="border rounded-xl w-[520px] h-[520px]" src="/logo.png" alt="hero" /> */}
-          {/* <div className="text-center">
-            <h1 className="text-4xl font-bold">Yooooooo!</h1>
-            <p className="text-lg max-w-xl mt-4">Welcome to 0xhardman&apos;s site.<br />
-              My name is come from the cyberpunk 2077 edgerunner&apos;s character Mann.
-              I am a full stack developer and a blockchain developer.
-              Looking for a job in the field of blockchain development.
-            </p>
-          </div> */}
         </div >
       </section >
-      <div className="overflow-scroll border-t border-[#2975DF55] ">
-        <div className="flex gap-10 py-6 w-fit animate-[scroll_90s_linear_infinite]">
-          {[...Array(4)].map((_, index) => (
-            <div key={index} className="flex gap-10 text-3xl font-bold">
-              {[
-                "DigitalNomad",
-                "Frontend",
-                "艺术之梦的安息者",
-                "Backend",
-                "DevOps",
-                "Blockchain",
-                "整活星人",
-                "Rust",
-                "Golang",
-                "白日梦想家",
-                "Python",
-                "PHP",
-                "Hackathon刺客",
-                "Java",
-                "打标签的Punk",
-                "C++",
-                "DAO",
-                "花里胡哨学家",
-                "BUPT3DAO",
-                "LXDAO网管"
-              ].map((text, i) => (
-                <div className="text-nowrap" key={i}>{text}</div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
+      <ScrollingTags />
       <section>
 
       </section>
