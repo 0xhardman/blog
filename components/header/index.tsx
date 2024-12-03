@@ -1,6 +1,8 @@
+import { ConnectButton } from "@rainbow-me/rainbowkit";
+
 /* eslint-disable @next/next/no-img-element */
 export function Header() {
-    return <header className="flex items-center px-8 backdrop-blur-xl bg-transparent  justify-between py-6 border-b fixed w-full top-0 bg-white">
+    return <header className="flex items-center px-8 backdrop-blur-md bg-white/50 justify-between py-6 border-b fixed w-full top-0 z-10">
         <div className="flex items-center ">
             <img width="54px" className="" src="/logo.png" alt="logo" />
             <h1 className="text-xl font-bold">0xHardman</h1>
@@ -11,7 +13,7 @@ export function Header() {
             <li>Articles</li>
         </ul>
         <div className="flex items-center gap-4">
-            <button>Connect</button>
+            <ConnectButton />
         </div>
     </header>
 }
