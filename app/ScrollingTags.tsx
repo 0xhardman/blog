@@ -14,6 +14,7 @@ export const ScrollingTags = () => {
     "ASCII Artist",
     "白日梦想家",
     "Python",
+    "纯爱战士",
     "PHP",
     "Hackathon刺客",
     "Java",
@@ -26,7 +27,7 @@ export const ScrollingTags = () => {
   ];
 
   return (
-    <div className="overflow-scroll border-y border-[#2975DF55]">
+    <div className="overflow-scroll border-y border-gray-300">
       <div className="flex gap-10 py-6 w-fit animate-[scroll_90s_linear_infinite]">
         {[...Array(4)].map((_, index) => (
           <div key={index} className="flex gap-10 text-3xl font-bold">
