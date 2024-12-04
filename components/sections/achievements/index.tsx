@@ -183,7 +183,7 @@ function HackathonCarousel() {
     //         })
     //     }
     // }, [])
-    return <div ref={scrollRef} className='w-full  pt-24' >
+    return <div ref={scrollRef} className='w-full pt-24'>
         <div className='flex flex-col'>
             <h1 className='text-4xl mt-8 font-bold container mx-auto'>Hackathons</h1>
             <p className='text-gray-600 mt-4 container mx-auto'>
@@ -192,20 +192,117 @@ function HackathonCarousel() {
         </div>
         <div className='mt-8 w-full overflow-scroll'>
             <div ref={containerRef} className='flex gap-4 w-full container mx-auto'>
-                {Array.from({ length: 10 }).map((_, index) => (
-                    <div key={index} className="min-w-[400px] py-4 rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200">
-                        <img className="w-full h-48 object-cover" src="/logo.png" alt="Project thumbnail" />
-                        <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">Project Title {index + 1}</div>
-                            <p className="text-gray-700 text-base">
-                                A brief description of the project and its key features. This showcases the main achievements and technical highlights.
-                            </p>
+                {[
+                    {
+                        title: "ETHGlobal Bangkok",
+                        date: "Nov 15-17, 2024",
+                        image: "/achievements/ethbangkok.png",
+                        project: {
+                            name: "BangkokOnTime(BOT)",
+                            description: "BOT is a cell phone web app that allows users to check the estimated travel time between two locations and purchase insurance for the travel time.",
+                            image: "/achievements/bot.png",
+                            link: "https://ethglobal.com/showcase/bangkokontime-bot-08k39",
+                            achievements: ["🏆 IDEMOED"]
+                        }
+                    },
+                    {
+                        title: "ETHGlobal Singapore",
+                        date: "Sep 20-22, 2024",
+                        image: "/achievements/ethsingapore.png",
+                        project: {
+                            name: "MACPI",
+                            description: "A reliable DAO voting infrastructure for next billion users ⌐◨-◨",
+                            image: "/achievements/macpi.png",
+                            link: "https://ethglobal.com/showcase/macpi-r3i87",
+                            achievements: ["🏆 Ethereum Foundation"]
+                        }
+                    },
+                    {
+                        title: "ETHGlobal Istanbul",
+                        date: "Nov 17-19, 2023",
+                        image: "/achievements/ethistanbul.png",
+                        project: {
+                            name: "TagTrove",
+                            description: "Transitioning Web2 user data to Web3 through a user-centric, privacy preserving way, with a precise marketing channel as data trading use case.",
+                            image: "/achievements/tagtrove.png",
+                            link: "https://ethglobal.com/showcase/tagtrove-kvtma",
+                            achievements: ["🏆 WalletConnect", "🏆 Scroll", "🏆 Mask Network", "🏆 Worldcoin"]
+                        }
+                    },
+                    {
+                        title: "ETHOnline 2023",
+                        date: "Oct 6-27, 2023",
+                        description: "Participated in ETHOnline 2023, developing decentralized applications and exploring new blockchain technologies.",
+                        image: "/achievements/ethonline.png",
+                        project: {
+                            name: "Donate3-InOne",
+                            description: "Donate3-inone is a cross-chain donation tool that allows recipients to receive donations from different chains on one chain with just a simple configuration. We hope to lower the barrier to using blockchain and make charity+web3 even simpler.",
+                            image: "/achievements/donate3.png",
+                            link: "https://ethglobal.com/showcase/donate3-inone-079jo",
+                            achievements: ["🏆 IDEMOED"]
+                        }
+                    },
+                    {
+                        title: "FVM Space Warp",
+                        date: "Jan 20 - Feb 10, 2023",
+                        image: "/achievements/fvm.png",
+                        project: {
+                            name: "DOAAD",
+                            description: "DOAAD (Decentralized Open Access Article Database) is a set of decentralized applications dedicated to reconstructing the current academic paper publishing process.",
+                            image: "/achievements/doaad.png",
+                            link: "https://ethglobal.com/showcase/doaad-xy06j",
+                            achievements: ["🏆 IDEMOED"]
+                        }
+                    }
+                ].map((hackathon, index) => (
+                    <div key={index} className="min-w-[400px] p-4 rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200">
+                        <div className="flex items-center gap-4 mb-4">
+                            <img className="w-16 h-16 object-contain rounded-lg border bg-white" src={hackathon.image} alt={`${hackathon.title} logo`} />
+                            <div>
+                                <div className="font-bold text-lg">{hackathon.title}</div>
+                                <div className="text-sm text-gray-500">{hackathon.date}</div>
+                            </div>
                         </div>
-                        <div className="px-6 pt-4 pb-2">
-                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#technology</span>
-                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#framework</span>
-                            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tools</span>
-                        </div>
+
+                        {hackathon.project ? (
+                            <div className="border-t pt-4">
+                                <div className="flex items-center gap-2 mb-3">
+                                    <div className="font-bold text-xl">{hackathon.project.name}</div>
+                                    {hackathon.project.link && (
+                                        <a href={hackathon.project.link} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
+                                            <svg className="w-5 h-5 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                            </svg>
+                                        </a>
+                                    )}
+                                </div>
+                                {hackathon.project.image && (
+                                    <img className="w-full h-48 object-cover rounded-lg border mb-3"
+                                        src={hackathon.project.image}
+                                        alt={`${hackathon.project.name} screenshot`} />
+                                )}
+                                <p className="text-gray-700 text-base mb-4">
+                                    {hackathon.project.description}
+                                </p>
+                                {hackathon.project.achievements && hackathon.project.achievements.length > 0 && (
+                                    <div className="pt-2">
+                                        {hackathon.project.achievements.map((achievement, i) => (
+                                            <span key={i} className="inline-block bg-yellow-100 rounded-full px-3 py-1 text-sm font-semibold text-yellow-800 mr-2 mb-2">
+                                                {achievement}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        ) : (
+                            <div className="pt-4">
+                                {hackathon.description && (
+                                    <p className="text-gray-700 text-base">
+                                        {hackathon.description}
+                                    </p>
+                                )}
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
