@@ -23,7 +23,7 @@ export default function HeroSection() {
                 ease: "power3.out"
             });
     }, []);
-    return <section className="flex flex-col items-center justify-center w-full min-h-[calc(100vh-85px)] py-20 container mx-auto">
+    return <section id="intro" className="flex flex-col items-center justify-center w-full min-h-[calc(100vh-85px)] py-20 container mx-auto">
         <div className="flex flex-col items-center gap-10">
             <div className="flex flex-col justify-center items-center gap-10">
                 <h1 className="text-4xl font-bold hero-content opacity-0">Hi! I&apos;m</h1>

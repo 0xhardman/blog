@@ -5,7 +5,7 @@ import { useRef } from 'react'
 // import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export default function AchievementsSection() {
-    return <div>
+    return <div id="achievements">
         <ProjectCarousel />
         <HackathonCarousel />
     </div>
@@ -57,12 +57,20 @@ function ProjectCarousel() {
                         link: ""
                     },
                     {
-                        title: "Layer 2 DeFi Protocol Development",
+                        title: "Layer 2 DEX Development",
                         period: "2023.10 - 2024.01",
-                        description: "Contributed to a Layer 2 DeFi protocol as a core developer. Developed key features for DEX trading, yield farming, and points system, focusing on optimizing user experience and transaction efficiency.",
-                        tags: ["Layer2", "DeFi", "DEX", "Yield Farming"],
-                        image: "https://placehold.co/600x400?text=Layer2+Dex",
+                        description: "Contributed to a Layer 2 decentralized exchange (DEX) as a core developer. Developed key features for token swapping, liquidity provision, and points system, focusing on optimizing user experience and transaction efficiency.",
+                        tags: ["Layer2", "DEX", "AMM", "DeFi"],
+                        image: "https://placehold.co/600x400?text=Layer2+DEX",
                         link: ""
+                    },
+                    {
+                        title: "CryptoDCA Development",
+                        period: "2024.06 - 2024.08",
+                        description: "Built CryptoDCA, a DeFi application enabling automated dollar-cost averaging strategies for cryptocurrency investments.",
+                        tags: ["DeFi", "DCA", "Smart Contracts"],
+                        image: "/achievements/cryptodca.png",
+                        link: "https://cryptodca.xyz"
                     },
                     {
                         title: "Data2.cash Development",
@@ -87,14 +95,6 @@ function ProjectCarousel() {
                         tags: ["Layer2", "Education", "Ethereum"],
                         image: "/achievements/myfirstlayer2.png",
                         link: "https://layer2.myfirst.io/"
-                    },
-                    {
-                        title: "CryptoDCA Development",
-                        period: "2023.08 - 2023.11",
-                        description: "Built CryptoDCA, a DeFi application enabling automated dollar-cost averaging strategies for cryptocurrency investments.",
-                        tags: ["DeFi", "DCA", "Smart Contracts"],
-                        image: "/achievements/cryptodca.png",
-                        link: "https://cryptodca.xyz"
                     },
                     {
                         title: "LXDAO Website Development",
