@@ -5,7 +5,7 @@ import { useRef } from 'react'
 // import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 export default function AchievementsSection() {
-    return <div id="achievements">
+    return <div id="achievements" className='px-4 md:px-0'>
         <ProjectCarousel />
         <HackathonCarousel />
     </div>
@@ -40,7 +40,7 @@ function ProjectCarousel() {
     // }, [])
     return <div ref={scrollRef} className='w-full pt-24'>
         <div className='flex flex-col'>
-            <h1 className='text-4xl mt-8 font-bold container mx-auto'>Projects</h1>
+            <h1 className='text-4xl mt-8 font-bold container md:mx-auto'>Projects</h1>
             <p className='text-gray-600 mt-4 container mx-auto'>
                 I specialize in blockchain and full-stack development, with expertise in Rust, Solana, Ethereum, and modern web technologies. My projects demonstrate strong technical capabilities in DeFi, NFT, and DAO domains.
             </p>
@@ -133,9 +133,9 @@ function ProjectCarousel() {
                         if (project.link) {
                             window.open(project.link, "_blank")
                         }
-                    }} className="min-w-[400px] p-4 rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200">
+                    }} className="min-w-[320px] md:min-w-[400px] p-4 rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200">
                         <img className="w-full h-48 object-cover rounded-lg border" src={project.image} alt="Project thumbnail" />
-                        <div className=" py-4">
+                        <div className="py-4">
                             <div className="font-bold text-xl mb-2">{project.title}</div>
                             <div className="text-sm text-gray-500 mb-2">{project.period}</div>
                             <p className="text-gray-700 text-base">
@@ -255,7 +255,7 @@ function HackathonCarousel() {
                         }
                     }
                 ].map((hackathon, index) => (
-                    <div key={index} className="min-w-[400px] p-4 rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200">
+                    <div key={index} className="min-w-[320px] md:min-w-[400px] p-4 rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200">
                         <div className="flex items-center gap-4 mb-4">
                             <img className="w-16 h-16 object-contain rounded-lg border bg-white" src={hackathon.image} alt={`${hackathon.title} logo`} />
                             <div>

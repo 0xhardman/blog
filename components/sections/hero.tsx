@@ -25,11 +25,11 @@ export default function HeroSection() {
     }, []);
     return <section id="intro" className="flex flex-col items-center justify-center w-full min-h-[calc(100vh-85px)] py-20 container mx-auto">
         <div className="flex flex-col items-center gap-10">
-            <div className="flex flex-col justify-center items-center gap-10">
+            <div className="flex flex-col justify-center items-center gap-4 md:gap-10">
                 <h1 className="text-4xl font-bold hero-content opacity-0">Hi! I&apos;m</h1>
                 <div className="relative hero-content opacity-0">
                     <Hero0xHardman />
-                    <div className="absolute -bottom-8 -right-16">
+                    <div className="absolute -bottom-4 -right-8 md:-bottom-8 md:-right-16">
                         <JobLooking />
                     </div>
                 </div>

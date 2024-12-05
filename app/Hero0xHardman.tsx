@@ -96,5 +96,5 @@ export function Hero0xHardman() {
 }
 
 function LineDecorator({ text }: { text: string }) {
-    return <HyperText className="text-sm leading-none text-black dark:text-white -m-[1px]" text={text} />
+    return <HyperText className="text-[8px] md:text-sm leading-none text-black dark:text-white -m-[1px]" text={text} />
 }
