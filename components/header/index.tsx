@@ -19,7 +19,7 @@ export function Header() {
             <ul className="flex items-center gap-8 text-gray-900 font-semibold">
                 <li><a href="#intro">Intro</a></li>
                 <li><a href="#achievements">Experience</a></li>
-                <li><Link href="https://medium.com/@0xhardman" target="_blank">Articles</Link></li>
+                <li><Link href="https://0xhardman.medium.com/" target="_blank">Articles</Link></li>
             </ul>
         </div>
         <div className="md:hidden flex">
@@ -39,7 +39,7 @@ export function Header() {
                         <ul className="flex flex-col gap-4 text-gray-900 font-semibold">
                             <li><a href="#intro">Intro</a></li>
                             <li><a href="#achievements">Experience</a></li>
-                            <li><Link href="https://medium.com/@0xhardman" target="_blank">Articles</Link></li>
+                            <li><Link href="https://0xhardman.medium.com/" target="_blank">Articles</Link></li>
 
                         </ul>
 
