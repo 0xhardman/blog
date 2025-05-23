@@ -194,6 +194,18 @@ function HackathonCarousel() {
             <div ref={containerRef} className='flex gap-4 w-full container mx-auto'>
                 {[
                     {
+                        title: "ETHGlobal Taipei",
+                        date: "April 4–6, 2025",
+                        image: "/achievements/ethtaipei.jpg",
+                        project: {
+                            name: "NewsQuantar",
+                            description: "News-Driven Trading Agent: Powered by Polygon MCP & 1inch APIs",
+                            image: "/achievements/newsquantar.jpg",
+                            link: "https://ethglobal.com/showcase/newsquantar-i7c1b",
+                            achievements: ["🏆 1inch 2nd"]
+                        }
+                    },
+                    {
                         title: "ETHGlobal Bangkok",
                         date: "Nov 15-17, 2024",
                         image: "/achievements/ethbangkok.png",
