@@ -18,7 +18,10 @@ export default {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+      fontFamily: {
+        vt323: ['var(--font-vt323)'],
+      }
   	},
   	animation: {
   		scroll: 'scroll 180s linear infinite',

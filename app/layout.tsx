@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { VT323 } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
@@ -17,6 +18,13 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+const vt323 = VT323({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-vt323",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: "0xhardman",
   description: "0xhardman",
@@ -30,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${vt323.variable} antialiased`}
       >
         <RainbowProvider>
           <Header />

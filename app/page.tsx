@@ -1,4 +1,5 @@
 import AchievementsSection from "@/components/sections/achievements";
+import CarouselSection from "@/components/sections/carousel-section";
 import HeroSection from "@/components/sections/hero";
 import { ScrollingTags } from "./ScrollingTags";
 
@@ -9,6 +10,7 @@ export default function Home() {
     <div>
       <HeroSection />
       <ScrollingTags />
+      <CarouselSection />
       <AchievementsSection />
     </div >
   );
