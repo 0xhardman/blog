@@ -26,8 +26,8 @@ const vt323 = VT323({
 });
 
 export const metadata: Metadata = {
-  title: "0xhardman",
-  description: "0xhardman",
+  title: "0xhardman.eth",
+  description: "0xhardman.eth personal blog.",
 };
 
 export default function RootLayout({

@@ -13,7 +13,7 @@ export function Header() {
     return <header className="flex items-center px-4 md:px-8 backdrop-blur-md bg-white/50 justify-between  py-3 md:py-6 border-b fixed w-full top-0 z-10">
         <div className="flex items-center ">
             <img className="w-[48px] md:w-[54px]" src="/logo.png" alt="logo" />
-            <h1 className="text-xl font-bold hidden md:block">0xHardman</h1>
+            <h1 className="text-xl font-bold hidden md:block">0xhardman.eth</h1>
         </div>
         <div className="hidden md:block">
             <ul className="flex items-center gap-8 text-gray-900 font-semibold">
