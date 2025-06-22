@@ -90,13 +90,7 @@ export function IconCloud({ icons, images, onIconHover }: IconCloudProps) {
           img.onload = () => {
             offCtx.clearRect(0, 0, offscreen.width, offscreen.height)
 
-            // Create circular clipping path
-            offCtx.beginPath()
-            offCtx.arc(20, 20, 20, 0, Math.PI * 2)
-            offCtx.closePath()
-            offCtx.clip()
-
-            // Draw the image
+            // Draw the image without circular clipping
             offCtx.drawImage(img, 0, 0, 40, 40)
 
             imagesLoadedRef.current[index] = true
