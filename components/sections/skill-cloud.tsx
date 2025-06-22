@@ -4,7 +4,16 @@
 import { IconCloud } from "@/components/magicui/icon-cloud"
 import { useState } from "react"
 
-const iconData = [
+// Define a type for our icon data with optional custom icon path
+type IconData = {
+  slug: string;
+  title: string;
+  desc: string;
+  proficiency: number;
+  customIconPath?: string;
+};
+
+const iconData: IconData[] = [
   { slug: "nextdotjs", title: "Next.js", desc: "Expert in building full-stack applications with advanced features and optimizations", proficiency: 5 },
   { slug: "react", title: "React", desc: "Proficient in developing modern, interactive UIs with advanced state management", proficiency: 5 },
   { slug: "typescript", title: "TypeScript", desc: "Daily driver for type-safe frontend and backend development", proficiency: 5 },
@@ -29,16 +38,16 @@ const iconData = [
   { slug: "javascript", title: "JavaScript", desc: "Core language for web development across frontend and backend", proficiency: 5 },
   { slug: "nodedotjs", title: "Node.js", desc: "Runtime environment for server-side JavaScript applications", proficiency: 5 },
   { slug: "vercel", title: "Vercel", desc: "Preferred platform for deploying Next.js and frontend applications", proficiency: 5 },
-  { slug: "celestia", title: "Celestia", desc: "Experience with modular blockchain development", proficiency: 3 },
+  { slug: "celestia", title: "Celestia", desc: "Experience with modular blockchain development", proficiency: 3, customIconPath: "/skill/celestia.svg" },
   { slug: "polygon", title: "Polygon", desc: "Developed applications on Polygon's scaling solution", proficiency: 4 },
-  { slug: "zircuit", title: "Zircuit", desc: "Experience with EVM-compatible ZK rollup development", proficiency: 3 },
-  { slug: "visualstudiocode", title: "VS Code", desc: "Primary development environment with customized workflows", proficiency: 5 },
+  { slug: "zircuit", title: "Zircuit", desc: "Experience with EVM-compatible ZK rollup development", proficiency: 3, customIconPath: "/skill/zircuit.svg" },
+  { slug: "visualstudiocode", title: "VS Code", desc: "Primary development environment with customized workflows", proficiency: 5, customIconPath: "/skill/vscode.svg" },
   { slug: "git", title: "Git", desc: "Version control system for all development projects", proficiency: 5 },
   { slug: "html5", title: "HTML5", desc: "Semantic markup for structured web content", proficiency: 5 },
   { slug: "css", title: "CSS3", desc: "Styling and layout for responsive web applications", proficiency: 5 },
   { slug: "tailwindcss", title: "Tailwind CSS", desc: "Utility-first CSS framework for rapid UI development", proficiency: 5 },
   { slug: "php", title: "PHP", desc: "Early career experience with server-side web development", proficiency: 3 },
-  { slug: "java", title: "Java", desc: "Academic experience through university coursework", proficiency: 3 },
+  { slug: "java", title: "Java", desc: "Academic experience through university coursework", proficiency: 3, customIconPath: "/skill/java.svg" },
   { slug: "c", title: "C", desc: "Used for algorithm competitions and foundational programming", proficiency: 4 },
   { slug: "cplusplus", title: "C++", desc: "Applied in competitive programming and algorithm challenges", proficiency: 4 },
   { slug: "go", title: "Go", desc: "Experience with backend development using this efficient language", proficiency: 4 },
@@ -51,8 +60,15 @@ const iconData = [
 
 export default function SkillCloud() {
   const [hoveredIcon, setHoveredIcon] = useState<(typeof iconData)[0] | null>(null)
-
-  const images = iconData.map((item) => `https://cdn.simpleicons.org/${item.slug}/${item.slug}`)
+  
+  const images = iconData.map((item) => {
+    // Use custom icon path if available
+    if (item.customIconPath) {
+      return item.customIconPath;
+    }
+    // Use Simple Icons for everything else
+    return `https://cdn.simpleicons.org/${item.slug}/${item.slug}`
+  })
 
   const handleIconHover = (iconIndex: number | null) => {
     if (iconIndex !== null && iconIndex < iconData.length) {
@@ -107,12 +123,22 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 function InfoPanel({ hoveredIcon }: { hoveredIcon: (typeof iconData)[0] | null }) {
+  // Function to get the correct icon URL
+  const getIconUrl = (icon: typeof iconData[0]) => {
+    // Use custom icon path if available
+    if (icon.customIconPath) {
+      return icon.customIconPath;
+    }
+    // Use Simple Icons for everything else
+    return `https://cdn.simpleicons.org/${icon.slug}/${icon.slug}`
+  }
+  
   return <div className="w-full md:w-80 h-auto md:h-96 bg-white rounded-xl shadow-lg border border-neutral-200 p-4 md:p-6 flex flex-col dark:border-neutral-800">
     {hoveredIcon ? (
       <div className="flex flex-row md:flex-col items-center md:justify-center h-full md:text-center space-x-4 md:space-x-0">
         <div className="w-14 h-14 md:w-16 md:h-16 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 md:mb-4">
           <img
-            src={`https://cdn.simpleicons.org/${hoveredIcon.slug}/${hoveredIcon.slug}`}
+            src={getIconUrl(hoveredIcon)}
             alt={hoveredIcon.title}
             className="w-8 h-8 md:w-10 md:h-10"
           />
