@@ -5,36 +5,36 @@ import { IconCloud } from "@/components/magicui/icon-cloud"
 import { useState } from "react"
 
 const iconData = [
-  { slug: "typescript", title: "TypeScript", desc: "Typed superset of JavaScript that compiles to plain" },
-  { slug: "javascript", title: "JavaScript", desc: "High-level programming language for web development" },
-  { slug: "dart", title: "Dart", desc: "Client-optimized language for fast apps on any platform" },
-  { slug: "java", title: "Java", desc: "Object-oriented programming language and computing platform" },
-  { slug: "react", title: "React", desc: "JavaScript library for building user interfaces" },
-  { slug: "flutter", title: "Flutter", desc: "UI toolkit for building natively compiled applications" },
-  { slug: "android", title: "Android", desc: "Mobile operating system based on Linux kernel" },
-  { slug: "html5", title: "HTML5", desc: "Markup language used for structuring web content" },
-  { slug: "css3", title: "CSS3", desc: "Style sheet language used for describing presentation" },
-  { slug: "nodedotjs", title: "Node.js", desc: "JavaScript runtime built on Chrome's V8 engine" },
-  { slug: "express", title: "Express", desc: "Fast, unopinionated web framework for Node.js" },
-  { slug: "nextdotjs", title: "Next.js", desc: "React framework for production-grade applications" },
-  { slug: "prisma", title: "Prisma", desc: "Next-generation ORM for Node.js and TypeScript" },
-  { slug: "amazonaws", title: "AWS", desc: "Comprehensive cloud computing platform" },
-  { slug: "postgresql", title: "PostgreSQL", desc: "Advanced open source relational database" },
-  { slug: "firebase", title: "Firebase", desc: "Platform for building mobile and web applications" },
-  { slug: "nginx", title: "Nginx", desc: "High-performance HTTP server and reverse proxy" },
-  { slug: "vercel", title: "Vercel", desc: "Platform for frontend frameworks and static sites" },
-  { slug: "testinglibrary", title: "Testing Library", desc: "Simple and complete testing utilities" },
-  { slug: "jest", title: "Jest", desc: "JavaScript testing framework with focus on simplicity" },
-  { slug: "cypress", title: "Cypress", desc: "End-to-end testing framework for web applications" },
-  { slug: "docker", title: "Docker", desc: "Platform for developing, shipping, and running applications" },
-  { slug: "git", title: "Git", desc: "Distributed version control system" },
-  { slug: "jira", title: "Jira", desc: "Issue tracking and project management tool" },
-  { slug: "github", title: "GitHub", desc: "Web-based Git repository hosting service" },
-  { slug: "gitlab", title: "GitLab", desc: "Web-based DevOps lifecycle tool" },
-  { slug: "visualstudiocode", title: "VS Code", desc: "Source code editor with rich ecosystem" },
-  { slug: "androidstudio", title: "Android Studio", desc: "Official IDE for Android development" },
-  { slug: "sonarqube", title: "SonarQube", desc: "Platform for continuous inspection of code quality" },
-  { slug: "figma", title: "Figma", desc: "Collaborative interface design tool" },
+  { slug: "nextdotjs", title: "Next.js", desc: "Expert in building full-stack applications with advanced features and optimizations", proficiency: 5 },
+  { slug: "react", title: "React", desc: "Proficient in developing modern, interactive UIs with advanced state management", proficiency: 5 },
+  { slug: "typescript", title: "TypeScript", desc: "Daily driver for type-safe frontend and backend development", proficiency: 5 },
+  { slug: "rust", title: "Rust", desc: "Used for developing high-performance quantitative trading systems", proficiency: 4 },
+  { slug: "python", title: "Python", desc: "Utilized for scripting, automation, and data processing tasks", proficiency: 4 },
+  { slug: "solidity", title: "Solidity", desc: "Experience building ERC20, ERC721, and ERC1155 smart contracts", proficiency: 4 },
+  { slug: "bitcoin", title: "Bitcoin", desc: "Blockchain development experience with Bitcoin protocols", proficiency: 3 },
+  { slug: "ethereum", title: "Ethereum", desc: "Development across multiple EVM chains including Mainnet, Optimism, Base, and Polygon", proficiency: 5 },
+  { slug: "solana", title: "Solana", desc: "Experience with Solana blockchain development and ecosystem", proficiency: 3 },
+  { slug: "docker", title: "Docker", desc: "Proficient in containerization for consistent development and deployment environments", proficiency: 5 },
+  { slug: "github", title: "GitHub", desc: "Experienced with Git workflows and CI/CD pipeline integration", proficiency: 5 },
+  { slug: "gitlab", title: "GitLab", desc: "Skilled in DevOps workflows and automated testing/deployment", proficiency: 4 },
+  { slug: "postgresql", title: "PostgreSQL", desc: "Primary database of choice for robust, scalable data storage solutions", proficiency: 5 },
+  { slug: "mysql", title: "MySQL", desc: "Secondary database experience for various application requirements", proficiency: 4 },
+  { slug: "sqlite", title: "SQLite", desc: "Used for lightweight, embedded database solutions", proficiency: 4 },
+  { slug: "redis", title: "Redis", desc: "Implemented for high-performance caching and session management", proficiency: 4 },
+  { slug: "apachekafka", title: "Kafka", desc: "Experience with message queuing for distributed system communication", proficiency: 3 },
+  { slug: "openai", title: "AI Integration", desc: "Recent exploration in AI technologies and integrations", proficiency: 3 },
+  { slug: "n8n", title: "n8n", desc: "Configured workflow automation nodes for various integration tasks", proficiency: 3 },
+  { slug: "javascript", title: "JavaScript", desc: "Core language for web development across frontend and backend", proficiency: 5 },
+  { slug: "nodedotjs", title: "Node.js", desc: "Runtime environment for server-side JavaScript applications", proficiency: 5 },
+  { slug: "vercel", title: "Vercel", desc: "Preferred platform for deploying Next.js and frontend applications", proficiency: 5 },
+  { slug: "celestia", title: "Celestia", desc: "Experience with modular blockchain development", proficiency: 3 },
+  { slug: "polygon", title: "Polygon", desc: "Developed applications on Polygon's scaling solution", proficiency: 4 },
+  { slug: "zircuit", title: "Zircuit", desc: "Experience with EVM-compatible ZK rollup development", proficiency: 3 },
+  { slug: "visualstudiocode", title: "VS Code", desc: "Primary development environment with customized workflows", proficiency: 5 },
+  { slug: "git", title: "Git", desc: "Version control system for all development projects", proficiency: 5 },
+  { slug: "html5", title: "HTML5", desc: "Semantic markup for structured web content", proficiency: 5 },
+  { slug: "css3", title: "CSS3", desc: "Styling and layout for responsive web applications", proficiency: 5 },
+  { slug: "tailwindcss", title: "Tailwind CSS", desc: "Utility-first CSS framework for rapid UI development", proficiency: 5 }
 ]
 
 export default function SkillCloud() {
@@ -75,6 +75,25 @@ export default function SkillCloud() {
 }
 
 
+// Star rating component to display proficiency
+function StarRating({ rating }: { rating: number }) {
+  return (
+    <div className="flex md:justify-center space-x-1 mt-1 mb-2">
+      {[...Array(5)].map((_, i) => (
+        <svg
+          key={i}
+          className={`w-4 h-4 ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
 function InfoPanel({ hoveredIcon }: { hoveredIcon: (typeof iconData)[0] | null }) {
   return <div className="w-full md:w-80 h-auto md:h-96 bg-white rounded-xl shadow-lg border border-neutral-200 p-4 md:p-6 flex flex-col dark:border-neutral-800">
     {hoveredIcon ? (
@@ -86,8 +105,9 @@ function InfoPanel({ hoveredIcon }: { hoveredIcon: (typeof iconData)[0] | null }
             className="w-8 h-8 md:w-10 md:h-10"
           />
         </div>
-        <div className="flex-1 md:flex-none">
+        <div className="flex-1 md:flex-none ">
           <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-1 md:mb-2">{hoveredIcon.title}</h3>
+          <StarRating rating={hoveredIcon.proficiency} />
           <p className="text-gray-600 text-sm leading-relaxed">{hoveredIcon.desc}</p>
         </div>
       </div>
