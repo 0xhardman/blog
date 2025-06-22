@@ -56,11 +56,12 @@ const iconData: IconData[] = [
   { slug: "adobephotoshop", title: "Photoshop", desc: "Design skills developed since high school for graphic work", proficiency: 4 },
   { slug: "telegram", title: "Telegram Bot", desc: "Experience developing automated bots for the Telegram messaging platform", proficiency: 4 },
   { slug: "discord", title: "Discord Bot", desc: "Experience developing automated bots for the Discord messaging platform", proficiency: 4 },
+  { slug: "prisma", title: "Prisma", desc: "Experience with Prisma for database and schema management", proficiency: 4 }
 ]
 
 export default function SkillCloud() {
   const [hoveredIcon, setHoveredIcon] = useState<(typeof iconData)[0] | null>(null)
-  
+
   const images = iconData.map((item) => {
     // Use custom icon path if available
     if (item.customIconPath) {
@@ -132,7 +133,7 @@ function InfoPanel({ hoveredIcon }: { hoveredIcon: (typeof iconData)[0] | null }
     // Use Simple Icons for everything else
     return `https://cdn.simpleicons.org/${icon.slug}/${icon.slug}`
   }
-  
+
   return <div className="w-full md:w-80 h-auto md:h-96 bg-white rounded-xl shadow-lg border border-neutral-200 p-4 md:p-6 flex flex-col dark:border-neutral-800">
     {hoveredIcon ? (
       <div className="flex flex-row md:flex-col items-center md:justify-center h-full md:text-center space-x-4 md:space-x-0">
