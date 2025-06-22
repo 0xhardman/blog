@@ -45,7 +45,29 @@ export function IconCloud({ icons, images, onIconHover }: IconCloudProps) {
   const rotationRef = useRef(rotation)
   const iconCanvasesRef = useRef<HTMLCanvasElement[]>([])
   const imagesLoadedRef = useRef<boolean[]>([])
+  
+  // Size multiplier for the sphere - will be updated based on screen size
+  const [sphereSizeMultiplier, setSphereSizeMultiplier] = useState(1)
 
+  // Handle responsive sizing based on screen width
+  useEffect(() => {
+    // Function to update size multiplier based on screen width
+    const updateSizeMultiplier = () => {
+      // md breakpoint is typically 768px
+      const isMediumOrLarger = window.innerWidth >= 768;
+      setSphereSizeMultiplier(isMediumOrLarger ? 2 : 1);
+    };
+    
+    // Set initial size
+    updateSizeMultiplier();
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', updateSizeMultiplier);
+    
+    // Clean up
+    return () => window.removeEventListener('resize', updateSizeMultiplier);
+  }, []);
+  
   // Create icon canvases once when icons/images change
   useEffect(() => {
     if (!icons && !images) return
@@ -117,16 +139,16 @@ export function IconCloud({ icons, images, onIconHover }: IconCloudProps) {
       const z = Math.sin(phi) * r
 
       newIcons.push({
-        x: x * 100,
-        y: y * 100,
-        z: z * 100,
+        x: x * 100 * sphereSizeMultiplier,
+        y: y * 100 * sphereSizeMultiplier,
+        z: z * 100 * sphereSizeMultiplier,
         scale: 1,
         opacity: 1,
         id: i,
       })
     }
     setIconPositions(newIcons)
-  }, [icons, images])
+  }, [icons, images, sphereSizeMultiplier])
 
   // Handle mouse events
   const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
@@ -295,8 +317,9 @@ export function IconCloud({ icons, images, onIconHover }: IconCloudProps) {
         const rotatedZ = icon.x * sinY + icon.z * cosY
         const rotatedY = icon.y * cosX + rotatedZ * sinX
 
-        const scale = (rotatedZ + 200) / 300
-        const opacity = Math.max(0.2, Math.min(1, (rotatedZ + 150) / 200))
+        // Adjust scale and opacity calculations based on sphere size
+        const scale = (rotatedZ + 200 * sphereSizeMultiplier) / (300 * sphereSizeMultiplier)
+        const opacity = Math.max(0.2, Math.min(1, (rotatedZ + 150 * sphereSizeMultiplier) / (200 * sphereSizeMultiplier)))
         const isHovered = hoveredIconIndex === icon.id
 
         ctx.save()
@@ -343,18 +366,22 @@ export function IconCloud({ icons, images, onIconHover }: IconCloudProps) {
         cancelAnimationFrame(animationFrameRef.current)
       }
     }
-  }, [icons, images, iconPositions, isDragging, mousePos, targetRotation, hoveredIconIndex])
+  }, [icons, images, iconPositions, isDragging, mousePos, targetRotation, hoveredIconIndex, sphereSizeMultiplier])
 
+  // Calculate base size for canvas
+  const baseSize = 250;
+  const canvasSize = baseSize * sphereSizeMultiplier;
+  
   return (
     <canvas
       ref={canvasRef}
-      width={250}
-      height={250}
+      width={canvasSize}
+      height={canvasSize}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
       onMouseLeave={handleMouseLeave}
-      className="rounded-lg cursor-pointer"
+      className="rounded-lg cursor-pointer w-full h-auto"
       aria-label="Interactive 3D Icon Cloud"
       role="img"
     />
