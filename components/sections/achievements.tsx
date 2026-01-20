@@ -40,8 +40,10 @@ function ProjectCarousel() {
     // }, [])
     return <div ref={scrollRef} className='w-full pt-24'>
         <div className='flex flex-col'>
-            <h1 className='text-4xl mt-8 font-bold container md:mx-auto'>Projects</h1>
-            <p className='text-gray-600 mt-4 container mx-auto'>
+            <h1 className='text-3xl md:text-4xl mt-8 font-bold container md:mx-auto tracking-tight'>
+                <span className="text-accent">{"// "}</span>Projects
+            </h1>
+            <p className='text-black/50 mt-4 container mx-auto font-light leading-relaxed'>
                 I specialize in blockchain and full-stack development, with expertise in Rust, Solana, Ethereum, and modern web technologies. My projects demonstrate strong technical capabilities in DeFi, NFT, and DAO domains.
             </p>
         </div>
@@ -133,8 +135,10 @@ function ProjectCarousel() {
                         if (project.link) {
                             window.open(project.link, "_blank")
                         }
-                    }} className="min-w-[320px] md:min-w-[400px] p-4 rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200">
-                        <img className="w-full h-48 object-cover rounded-lg border" src={project.image} alt="Project thumbnail" />
+                    }} className="group min-w-[320px] md:min-w-[400px] p-4 rounded-xl overflow-hidden shadow-card bg-white/80 backdrop-blur-sm border border-black/5 transition-all duration-300 ease-out hover:shadow-card-hover hover:-translate-y-1 hover:border-accent/20 cursor-pointer">
+                        <div className="overflow-hidden rounded-lg">
+                            <img className="w-full h-48 object-cover border border-black/5 transition-transform duration-500 ease-out group-hover:scale-105" src={project.image} alt="Project thumbnail" />
+                        </div>
                         <div className="py-4">
                             <div className="font-bold text-xl mb-2">{project.title}</div>
                             <div className="text-sm text-gray-500 mb-2">{project.period}</div>
@@ -142,10 +146,10 @@ function ProjectCarousel() {
                                 {project.description}
                             </p>
                         </div>
-                        <div className="pt-4 pb-2">
+                        <div className="pt-4 pb-2 flex flex-wrap gap-2">
                             {project.tags.map((tag, i) => (
-                                <span key={i} className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                                    #{tag}
+                                <span key={i} className="inline-block bg-black/5 rounded-full px-3 py-1 text-xs font-medium text-black/70 transition-colors duration-200 hover:bg-accent/10 hover:text-accent-dim">
+                                    {tag}
                                 </span>
                             ))}
                         </div>
@@ -185,8 +189,10 @@ function HackathonCarousel() {
     // }, [])
     return <div ref={scrollRef} className='w-full pt-24'>
         <div className='flex flex-col'>
-            <h1 className='text-4xl mt-8 font-bold container mx-auto'>Hackathons</h1>
-            <p className='text-gray-600 mt-4 container mx-auto'>
+            <h1 className='text-3xl md:text-4xl mt-8 font-bold container mx-auto tracking-tight'>
+                <span className="text-accent-secondary">{"// "}</span>Hackathons
+            </h1>
+            <p className='text-black/50 mt-4 container mx-auto font-light leading-relaxed'>
                 Through hackathons, I collaborate with global developers to build innovative solutions. These competitions sharpen my ability to work in teams, prototype rapidly, and deliver under pressure while expanding my technical expertise.
             </p>
         </div>
@@ -267,9 +273,9 @@ function HackathonCarousel() {
                         }
                     }
                 ].map((hackathon, index) => (
-                    <div key={index} className="min-w-[320px] md:min-w-[400px] p-4 rounded-lg overflow-hidden shadow-lg bg-white border border-gray-200">
+                    <div key={index} className="group min-w-[320px] md:min-w-[400px] p-4 rounded-xl overflow-hidden shadow-card bg-white/80 backdrop-blur-sm border border-black/5 transition-all duration-300 ease-out hover:shadow-card-hover hover:-translate-y-1 hover:border-accent-secondary/20">
                         <div className="flex items-center gap-4 mb-4">
-                            <img className="w-16 h-16 object-contain rounded-lg border bg-white" src={hackathon.image} alt={`${hackathon.title} logo`} />
+                            <img className="w-16 h-16 object-contain rounded-lg border border-black/5 bg-white transition-transform duration-300 group-hover:scale-105" src={hackathon.image} alt={`${hackathon.title} logo`} />
                             <div>
                                 <div className="font-bold text-lg">{hackathon.title}</div>
                                 <div className="text-sm text-gray-500">{hackathon.date}</div>
@@ -289,17 +295,19 @@ function HackathonCarousel() {
                                     )}
                                 </div>
                                 {hackathon.project.image && (
-                                    <img className="w-full h-48 object-cover rounded-lg border mb-3"
-                                        src={hackathon.project.image}
-                                        alt={`${hackathon.project.name} screenshot`} />
+                                    <div className="overflow-hidden rounded-lg mb-3">
+                                        <img className="w-full h-48 object-cover border border-black/5 transition-transform duration-500 ease-out group-hover:scale-105"
+                                            src={hackathon.project.image}
+                                            alt={`${hackathon.project.name} screenshot`} />
+                                    </div>
                                 )}
-                                <p className="text-gray-700 text-base mb-4">
+                                <p className="text-black/70 text-base mb-4">
                                     {hackathon.project.description}
                                 </p>
                                 {hackathon.project.achievements && hackathon.project.achievements.length > 0 && (
-                                    <div className="pt-2">
+                                    <div className="pt-2 flex flex-wrap gap-2">
                                         {hackathon.project.achievements.map((achievement, i) => (
-                                            <span key={i} className="inline-block bg-yellow-100 rounded-full px-3 py-1 text-sm font-semibold text-yellow-800 mr-2 mb-2">
+                                            <span key={i} className="inline-block bg-gradient-to-r from-amber-100 to-yellow-100 border border-amber-200/50 rounded-full px-3 py-1 text-xs font-semibold text-amber-700">
                                                 {achievement}
                                             </span>
                                         ))}
