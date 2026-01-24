@@ -28,17 +28,13 @@ export const ScrollingTags = () => {
 
   return (
     <div className="overflow-hidden border-y border-black/10 bg-gradient-to-r from-transparent via-white/50 to-transparent">
-      <div className="flex py-6 w-fit animate-[scroll_90s_linear_infinite] hover:[animation-play-state:paused]">
+      <div className="flex py-10 w-fit animate-[scroll_90s_linear_infinite] hover:[animation-play-state:paused]">
         {[...Array(4)].map((_, index) => (
           <div key={index} className="flex items-center text-2xl md:text-3xl font-bold tracking-tight">
             {tags.map((tag, i) => (
               <div key={i} className="flex items-center">
                 <span
-                  className={`text-nowrap transition-colors duration-200 hover:text-accent ${
-                    tag.accent
-                      ? 'text-accent-secondary'
-                      : 'text-black/80'
-                  }`}
+                  className={`text-nowrap rainbow-hover cursor-pointer text-black/80`}
                 >
                   {tag.text}
                 </span>
