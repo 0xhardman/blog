@@ -51,6 +51,22 @@ function ProjectCarousel() {
             <div ref={containerRef} className='flex gap-4 w-full container mx-auto'>
                 {[
                     {
+                        title: "HairAI",
+                        period: "2025.01",
+                        description: "AI-powered hairstyle generator that transforms your look with instant style suggestions. Upload a photo to explore 12+ preset styles like Buzz Cut, Pompadour, Pixie Cut, and more, or customize your own with AI.",
+                        tags: ["AI", "Next.js", "Web3", "Image Generation"],
+                        image: "https://placehold.co/600x400?text=HairAI",
+                        link: "https://hair.0xhardman.xyz/"
+                    },
+                    {
+                        title: "X-Split",
+                        period: "2025.01",
+                        description: "Free online tool for creating 'tap to view' seamless long image posts on Twitter/X. Automatically splits images into 2-4 segments with gap compensation for perfect carousel display on both mobile and desktop.",
+                        tags: ["Next.js", "Image Processing", "Twitter/X", "Tool"],
+                        image: "https://placehold.co/600x400?text=X-Split",
+                        link: "https://x-split.0xhardman.xyz/"
+                    },
+                    {
                         title: "High-Frequency Trading System",
                         period: "2024.01 - Present",
                         description: "Developed a cryptocurrency trading system using Rust, featuring real-time data processing and automated trading strategies. Achieved millisecond-level execution using Tokio for concurrency and Docker for deployment.",
